@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Health Tracker</h1>
+            <p>Track your health progress and stay on top of your goals</p>
+        </header>
+
+        <form id="health-form">
+            <h2>Enter Your Today's Health Data</h2>
+            <div class="form-group">
+                <label for="calories">Calories Consumed (kcal):</label>
+                <input type="number" id="calories" placeholder="Enter calories" required>
+            </div>
+            <div class="form-group">
+                <label for="exercise">Exercise Duration (minutes):</label>
+                <input type="number" id="exercise" placeholder="Enter minutes" required>
+            </div>
+            <div class="form-group">
+                <label for="water">Water Intake (liters):</label>
+                <input type="number" id="water" placeholder="Enter liters" required>
+            </div>
+            <div class="form-group">
+                <label for="sleep">Sleep Duration (hours):</label>
+                <input type="number" id="sleep" placeholder="Enter hours" required>
+            </div>
+            <button type="submit">Save Today's Data</button>
+        </form>
+
+        <section id="track-summary">
+            <h2>Today's Health Summary</h2>
+            <p><strong>Calories:</strong> <span id="calories-summary">0</span> kcal</p>
+            <p><strong>Exercise:</strong> <span id="exercise-summary">0</span> minutes</p>
+            <p><strong>Water:</strong> <span id="water-summary">0</span> liters</p>
+            <p><strong>Sleep:</strong> <span id="sleep-summary">0</span> hours</p>
+            <button id="save-pdf">Save as PDF</button>
+        </section>
+
+        <section id="history">
+            <h2>Health Data History</h2>
+            <ul id="history-list"></ul>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
